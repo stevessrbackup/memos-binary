@@ -29,14 +29,14 @@ jobs:
     - name: Build Frontend
       run: |
         cd memos
+        mkdir  artifact
         rm -rf ./server/router/frontend/dist
         cd web
         export COREPACK_SKIP_SIGNATURES=true
         corepack enable && export COREPACK_SKIP_SIGNATURES=true && export COREPACK_SKIP_SIGNATURES=true pnpm i
         export COREPACK_SKIP_SIGNATURES=true pnpm update
         export COREPACK_SKIP_SIGNATURES=true pnpm build
-        mkdir -p ../artifact
-        cp -R dist ../server/router/frontend/dist
+        export COREPACK_SKIP_SIGNATURES=true pnpm release
         cd ../..
 
     - name: Build binary
