@@ -34,9 +34,9 @@ jobs:
         cd web
         export COREPACK_SKIP_SIGNATURES=true
         corepack enable && export COREPACK_SKIP_SIGNATURES=true && export COREPACK_SKIP_SIGNATURES=true pnpm i
-        export COREPACK_SKIP_SIGNATURES=true pnpm update
-        export COREPACK_SKIP_SIGNATURES=true pnpm build
-        export COREPACK_SKIP_SIGNATURES=true pnpm release
+        COREPACK_SKIP_SIGNATURES=true pnpm update
+        COREPACK_SKIP_SIGNATURES=true pnpm build
+        COREPACK_SKIP_SIGNATURES=true pnpm release
         cd ../..
 
     - name: Build binary
