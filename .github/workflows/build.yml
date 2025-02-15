@@ -31,6 +31,7 @@ jobs:
         cd memos/web
         export COREPACK_SKIP_SIGNATURES=true
         corepack enable && export COREPACK_SKIP_SIGNATURES=true && pnpm i --frozen-lockfile
+        pnpm update
         pnpm build
         mkdir -p ../artifact
         rm -rf ../server/router/frontend/dist
