@@ -30,7 +30,7 @@ jobs:
       run: |
         cd memos/web
         export COREPACK_SKIP_SIGNATURES=true
-        corepack enable && export COREPACK_SKIP_SIGNATURES=true && export COREPACK_SKIP_SIGNATURES=true pnpm i --frozen-lockfile
+        corepack enable && export COREPACK_SKIP_SIGNATURES=true && export COREPACK_SKIP_SIGNATURES=true pnpm i
         export COREPACK_SKIP_SIGNATURES=true pnpm update
         export COREPACK_SKIP_SIGNATURES=true pnpm build
         mkdir -p ../artifact
